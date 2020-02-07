@@ -18,7 +18,12 @@ eureka:
 #  security:
 #    enabled: false
 
-
+zuul:
+  routes:
+    app-sidecar:
+      path: /laravel-sidecar/**
+      serviceId: laravel-sidecar
+  ignored-services: '*'
 
 
 info:
